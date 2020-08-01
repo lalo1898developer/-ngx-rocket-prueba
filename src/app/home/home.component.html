@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <h1>
+      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo" />
+    </h1>
+    <h3>Escribe un número para buscar si es multiplo de 3, 5 o 7</h3>
+    <form [formGroup]="form" (ngSubmit)="checkMultipli(input.value)">
+      <input formControlName="numero" type="number" #input />
+      <button class="btn btn-primary" type="submit">Probar</button>
+    </form>
+
+    <div>
+      <h6 [ngClass]="classText">{{ form.value.resultado }}</h6>
+    </div>
+
+    <button
+      *ngIf="isSelected"
+      class="btn btn-primary"
+      (click)="input.value = null; form.value.resultado = ''; isSelected = !isSelected"
+    >
+      Reintentar
+    </button>
+  </div>
+</div>
