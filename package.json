@@ -40,7 +40,7 @@
     "firebase": "^7.13.1"
   },
   "devDependencies": {
-    "@angular/cli": "~9.1.7",
+    "@angular/cli": "~15.2.6",
     "@angular/compiler-cli": "^9.1.9",
     "@angular/language-service": "^9.1.9",
     "@angular-devkit/build-angular": "^0.901.7",
